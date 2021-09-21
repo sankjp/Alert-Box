@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+*{background-color:skyblue;}
+.container{padding:10px; align-items:center; height:100vh; width:100%;justify-content:center; display:flex;}
+#lastName{margin-bottom:10px;height:3vh; background-color:white;}
+#firstName{margin-bottom:5px; height:3vh;background-color:white;}
+input[type=submit]{background-color:#4CAF50; color:white; border-radius:3px;}
+</style>
+
+<script>
+let validate=()=> {
+let fname = document.getElementById("firstName");
+if (fname.value =="") {
+alert("please input your first name.");
+return false;  
+}
+let lname = document.getElementById("lastName");
+if (lname.value =="") {
+alert("please input your last name.");
+return false;  
+}
+ alert("submitting form, thank you!");
+
+ }
+</script>
+</head>
+<body>
+<div class="container">
+<form name="survey" onsubmit="validate();">
+
+First Name:<br>
+<input type="text" name="first name" id="firstName"/><div>
+Last Name:<br>
+<input type="text" name="last name" id="lastName"></input><div>
+<input type="submit" value="submit now"></input>
+</form>
+</div>
+</body>
+
+</html> 
